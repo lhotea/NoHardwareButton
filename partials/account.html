@@ -1,0 +1,97 @@
+<ion-view title="account - {{account.id}}" hide-back-button=true>
+
+
+	<ion-content>
+
+		<ion-list >
+			<ion-item class="transparent">
+				<h2>Rechnungsadresse</h2>
+				<div class="list card">
+					<div class="item">
+						<p>{{ account.title }} {{ account.firstName }} {{ account.lastName }}</p>
+						<p>{{ account.address }}</p>
+						<p>{{ account.zip }} {{ account.city }}</p>
+					</div>
+				</div>
+			</ion-item>
+			<ion-item class="transparent">
+
+				<h2>Rechnungssaldo</h2>
+
+
+				<div class="list card">
+
+					<a ui-sref="openBalanceInfo" class="item item-icon-right">Offener Gesamtbetrag {{account.balanceDue}} {{account.currency}} <i class="icon ion-help-circled"></i> </a>
+				</div>
+			</ion-item>
+			<ion-item class="transparent">
+
+				<h2>Laufende Kosten</h2>
+				<div class="list card">
+
+					<a ui-sref="unbilledUsage" class="item item-icon-right">Nutzungsgebühren  {{account.unbilledDue}} {{account.currency}} <i class="icon ion-ios7-telephone"></i></a>
+				</div>
+			</ion-item>
+			<ion-item class="transparent">
+				<h2>Mobile phones</h2>
+				<div class="list card">
+
+					<ion-list>
+
+						<ion-item ui-sref="mobile({mobile: $index})" class="item item-icon-left item-icon-right" ng-repeat="mobile in mobiles">
+							<i class="icon ion-iphone"></i>
+							{{mobile.wallets[0].msisdn}}
+							<i class="icon ion-ios7-telephone"></i>
+
+						</ion-item>
+
+
+					</ion-list>
+				</div>
+			</ion-item>
+
+			<ion-item class="transparent">
+				<h2>Rechnungen</h2>
+				<div class="list card">
+
+					<ion-list>
+
+						<ion-item ui-sref="invoice({invoice: $index})" class="item item-icon-right" ng-repeat="invoice in invoices">
+							Rechnungsdatum: {{invoice.statementDate2}} Rechnungsbetrag: {{invoice.balanceDue}} {{account.currency}} Zahlbar bis: {{invoice.dueDate}}	<i class="icon ion-arrow-right-c"></i>
+
+						</ion-item>
+					</ion-list>
+				</div>
+			</ion-item>
+		</ion-list>
+
+
+		<div ng-show="{{debug}}">
+
+			<div id="request">Request:
+				<br/>{{request}}
+			</div>
+			<div id="response">Response:
+				<br/>{{response}}
+			</div>
+		</div>
+	</ion-content>
+
+
+	<ion-footer-bar align-title="left" class="bar-stable tabs tabs-icon-only">
+		
+			<a class="tab-item" ui-sref="login" ion-nav-animation="slide-in-up">
+				<i class="icon ion-log-out"></i>
+				Logout
+			</a>
+			<a class="tab-item" ui-sref="settings" ion-nav-animation="slide-in-up">
+				<i class="icon ion-android-mixer"></i>
+				Einstellungen
+			</a>
+			<a class="tab-item" ui-sref="help" ion-nav-animation="slide-in-up">
+				<i class="icon ion-help-circled"></i>
+				Hilfe
+			</a>
+		
+	</ion-footer-bar>
+</ion-view>

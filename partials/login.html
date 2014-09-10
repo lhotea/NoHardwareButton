@@ -1,0 +1,50 @@
+
+		<ion-view title="bill2mobile" hide-back-button=true >
+			<ion-content>
+					
+								<div class="item transparent">
+    <img src="images/logo.png">
+  </div>
+
+			<div class="list list-inset transparent">
+					<label class="item item-input">
+						<input type="text" ng-model="cred.username" placeholder="Username">
+					</label>
+					<label class="item item-input">
+						<input type="password" ng-model="cred.password" placeholder="Password">
+					</label>
+				
+
+				<button ng-click="login()" class="button button-block icon-right ion-chevron-right button-calm">
+					Login
+				</button>
+				</div>
+					<div class="card">
+					<div class="item item-checkbox">
+						<label class="checkbox">
+				<input type="checkbox" ng-model="cred.debug" ng-click="setDefaultUser()"></input>
+					</label>
+					Debug 					</div>
+					<div class="item item-checkbox">
+						<label class="checkbox">
+				<input type="checkbox" ng-model="cred.mockup"></input>
+					</label>
+					Use mockup
+					</div>
+				
+				
+			<div ng-show="cred.debug">
+				<div class="item">
+				<div id="request">Request:
+					<br/>{{request}}
+				</div>
+				<div id="response">Response:
+					<br/>{{response}}
+				</div>
+				</div>
+			</div>
+			</div>	
+
+</ion-content>
+		</ion-view>
+		
