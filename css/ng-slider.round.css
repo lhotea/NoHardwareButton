@@ -1,0 +1,5 @@
+
+  .jslider_round .jslider-bg i,
+  .jslider_round .jslider-pointer { background-image: url(../img/jslider.round.png); }
+
+  .jslider_round .jslider-pointer { width: 60px; height: 60px; top: -10px; margin-left: -16px; }
