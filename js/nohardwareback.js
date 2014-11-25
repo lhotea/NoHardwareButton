@@ -14,7 +14,7 @@ function onBackKeyPress(e) {
 
     // device APIs are available
     //
-    function onDeviceReady() {
+    function onDeviceReady(e) {
         // Register the event listener
 	  alert("device ready!");
       document.addEventListener("backbutton", onBackKeyPress, true);
