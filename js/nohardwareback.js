@@ -6,5 +6,17 @@ function onBackKeyPress(e) {
         return false;
 }
 
-document.addEventListener("backbutton", onBackKeyPress, true);
+// Wait for device API libraries to load
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Register the event listener
+      document.addEventListener("backbutton", onBackKeyPress, true);
+    }
+
 	  
