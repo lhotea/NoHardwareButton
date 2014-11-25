@@ -11,6 +11,7 @@ function onBackKeyPress(e) {
     function onLoad() {
 		alert("onLoad");
 		if (typeof navigator.device == "undefined"){
+			alert("undefined device");
          document.addEventListener("deviceready", onDeviceReady, false);
 		}
 		else
