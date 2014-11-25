@@ -9,7 +9,12 @@ function onBackKeyPress(e) {
 // Wait for device API libraries to load
     //
     function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
+		if (typeof navigator.device == "undefined"){
+         document.addEventListener("deviceready", onDeviceReady, false);
+		}
+		else
+		onDeviceReady();
+		
     }
 
     // device APIs are available
