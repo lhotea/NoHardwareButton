@@ -16,6 +16,7 @@ function onBackKeyPress(e) {
     //
     function onDeviceReady() {
         // Register the event listener
+	  alert("device ready!");
       document.addEventListener("backbutton", onBackKeyPress, true);
 	  document.addEventListener("volumedownbutton", onBackKeyPress, false);
     }
