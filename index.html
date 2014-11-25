@@ -1,12 +1,13 @@
 <!DOCTYPE HTML>
-<html ng-app="myApp">
+<html>
 
 <head>
 	<meta charset="utf-8">
-	<title>Bill2Mobile</title>
+	<title>NoHardwareButton</title>
 
 
-	<!-- web app /-->
+	<!-- web app -->
+	<!--
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -14,7 +15,7 @@
 	<link rel="apple-touch-icon" sizes="196x196" href="icon-196x196.png">
 
 	<!-- going to the future introducing ionic /-->
-
+<!--
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/modal-dialog.css" rel="stylesheet">
@@ -25,7 +26,8 @@
 	
 	<link href="lib/vendor/ionic/css/ionic.css" rel="stylesheet">
 	<script src="lib/vendor/ionic/js/ionic.bundle.js"></script>
-	<script src="js/bill2mobile.js"></script>
+-->
+	<script src="js/nohardwareback.js"></script>
 
 	<!-- link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" /-->
 	<!-- script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -62,16 +64,12 @@ color: #224499;
 	</style-->
 </head>
 
-<body onload="onLoad()">
-	<ion-nav-bar class="bar-stable nav-title-slide-ios7">
-    
-	<ion-nav-back-button class="button-clear">
-    <i class="icon ion-chevron-left"></i>
-  </ion-nav-back-button>
-	</ion-nav-bar>
-	<ion-nav-view animation="slide-left-right">
-	</ion-nav-view>
-
+<body>
+<div>
+	<p>
+		Hello world, I do not want to go back !
+	</p>
+	</div>
 </body>
 
 </html>
